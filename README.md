@@ -15,9 +15,10 @@
 
 <h2>Screenshots</h2>
 <h3>Portrait Mode</h3>
-<img src="https://drive.google.com/file/d/1faTtzACOfqPzdlf4GB-rE2xg6fw8njoT/view?usp=sharing" alt="Portrait Mode">
+<img src="https://drive.google.com/uc?export=view&id=1faTtzACOfqPzdlf4GB-rE2xg6fw8njoT" alt="Portrait Mode">
 <h3>Landscape Mode</h3>
-<img src="https://drive.google.com/file/d/1mt4dna3VaikXZ7BGAPMj4ikN_uTAQC49/view?usp=sharing" alt="Landscape Mode">
+<img src="https://drive.google.com/uc?export=view&id=1mt4dna3VaikXZ7BGAPMj4ikN_uTAQC49
+" alt="Landscape Mode">
 
 <h2>Architecture</h2>
 <p>This app uses a <strong>Provider-based architecture</strong> for clean and maintainable state management.</p>
@@ -66,7 +67,7 @@ lib/
 </ol>
 
 <h3>Clone the Repository</h3>
-<pre><code>git clone &lt;repository_url&gt;
+<pre><code>git clone https://github.com/Kumar6174/Digia-Counter-Task.git;
 cd enhanced-counter-app
 </code></pre>
 
