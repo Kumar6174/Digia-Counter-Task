@@ -15,10 +15,9 @@
 
 <h2>Screenshots</h2>
 <h3>Portrait Mode</h3>
-<img src="https://drive.google.com/uc?export=view&id=1faTtzACOfqPzdlf4GB-rE2xg6fw8njoT" alt="Portrait Mode">
+<img style="width:300px; height:600px;" src="https://drive.google.com/uc?export=view&id=1faTtzACOfqPzdlf4GB-rE2xg6fw8njoT" alt="Portrait Mode">
 <h3>Landscape Mode</h3>
-<img src="https://drive.google.com/uc?export=view&id=1mt4dna3VaikXZ7BGAPMj4ikN_uTAQC49
-" alt="Landscape Mode">
+<img style="width:600px; height:300px;" src="https://drive.google.com/uc?export=view&id=1mt4dna3VaikXZ7BGAPMj4ikN_uTAQC49" alt="Landscape Mode">
 
 <h2>Architecture</h2>
 <p>This app uses a <strong>Provider-based architecture</strong> for clean and maintainable state management.</p>
