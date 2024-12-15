@@ -12,9 +12,12 @@ class CounterPage extends StatelessWidget {
     final counterProvider = Provider.of<CounterProvider>(context);
     final themeProvider = Provider.of<ThemeProvider>(context);
 
+    // Check the orientation
+    final isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Digia Counter App"),
+        title: const Text("Enhanced Counter"),
         actions: [
           IconButton(
             icon: Icon(
@@ -36,43 +39,69 @@ class CounterPage extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
         ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AnimatedSwitcher(
-                duration: const Duration(milliseconds: 500),
-                child: Text(
-                  counterProvider.count.toString(),
-                  key: ValueKey<int>(counterProvider.count),
-                  style: const TextStyle(
-                    fontSize: 80,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 30),
-              ActionButton(
-                onTap: counterProvider.increment,
-                color: Colors.green,
-                label: "Increment",
-              ),
-              const SizedBox(height: 20),
-              ActionButton(
-                onTap: counterProvider.decrement,
-                color: Colors.red,
-                label: "Decrement",
-              ),
-              const SizedBox(height: 20),
-              ActionButton(
-                onTap: counterProvider.reset,
-                color: Colors.blue,
-                label: "Reset",
-              ),
-            ],
+        child: isLandscape
+            ? Row(
+          children: [
+            Expanded(
+              child: _buildCounterSection(context, counterProvider),
+            ),
+            Expanded(
+              child: _buildButtonSection(context, counterProvider),
+            ),
+          ],
+        )
+            : Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _buildCounterSection(context, counterProvider),
+            const SizedBox(height: 30),
+            _buildButtonSection(context, counterProvider),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // Counter display widget
+  Widget _buildCounterSection(BuildContext context, CounterProvider counterProvider) {
+    return Center(
+      child: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 500),
+        child: Text(
+          counterProvider.count.toString(),
+          key: ValueKey<int>(counterProvider.count),
+          style: const TextStyle(
+            fontSize: 80,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
+    );
+  }
+
+  // Button section widget
+  Widget _buildButtonSection(BuildContext context, CounterProvider counterProvider) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        ActionButton(
+          onTap: counterProvider.increment,
+          color: Colors.green,
+          label: "Increment",
+        ),
+        const SizedBox(height: 20),
+        ActionButton(
+          onTap: counterProvider.decrement,
+          color: Colors.red,
+          label: "Decrement",
+        ),
+        const SizedBox(height: 20),
+        ActionButton(
+          onTap: counterProvider.reset,
+          color: Colors.blue,
+          label: "Reset",
+        ),
+      ],
     );
   }
 }
