@@ -15,9 +15,9 @@
 
 <h2>Screenshots</h2>
 <h3>Portrait Mode</h3>
-<img src="https://via.placeholder.com/300x600.png?text=Portrait+Mode" alt="Portrait Mode">
+<img src="https://drive.google.com/file/d/1faTtzACOfqPzdlf4GB-rE2xg6fw8njoT/view?usp=sharing" alt="Portrait Mode">
 <h3>Landscape Mode</h3>
-<img src="https://via.placeholder.com/600x300.png?text=Landscape+Mode" alt="Landscape Mode">
+<img src="https://drive.google.com/file/d/1mt4dna3VaikXZ7BGAPMj4ikN_uTAQC49/view?usp=sharing" alt="Landscape Mode">
 
 <h2>Architecture</h2>
 <p>This app uses a <strong>Provider-based architecture</strong> for clean and maintainable state management.</p>
